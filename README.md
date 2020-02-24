@@ -13,11 +13,16 @@
 
 ## Jak spustit aplikaci
 ### Metoda 1. (Docker)
-Stáhněte si repozitář.
-das
+
+ 1. Otevřete konzoli/terminál v hlavním adresáři (appliftingtest)
+ 2. Vytvořte docker image: `docker build -f Dockerfile -t applmonitoring .`
+ 3. Spusťte docker image: `docker run -p 8080:8080 applmonitoring`
+
 ### Metoda 2.
 V tomto případě je nutno mít staženou Javu, a to alespoň verzi 8.
-Otevřete konzoli/cli/ps/terminal ve složce :::::::::: a zadejte následující příkaz:
+
+ 1. Otevřete konzoli/terminál v adresáři appliftingtest/target
+ 2. Spusťte aplikaci pomocí příkazu: `java -jar applmonitoring.jar`
 
 ## Jak používat aplikaci 
 Po spuštění bude aplikace poslouchat na portu 8080 localhostu (např. http://localhost:8080/endpoints).
