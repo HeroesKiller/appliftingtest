@@ -9,3 +9,24 @@
 **Pár implementačních poznámek:**
 - **Autentizaci/autorizaci** jsem dle zadání prováděl přes accessToken v headeru, běžně bych zabezpečení řešil spíše přihlašováním a rolemi s pomocí Spring Security, jelikož accessToken je již u jednotlivých uživatelů v databázi.
 - Co se **Dockeru** týče, omlouvám se, pokud nebude fungovat korektně. V tuto chvíli jsem u velice starého PC s Win 10 Home, který Docker oficiálně nepodporuje a jeho instalace a spouštění se musí řešit přes virtualbox (což tento počítač těžko rozdýchává) a nastavování proměnných s každou instancí.  Nabízím tedy dvě alternativy spuštění aplikace.
+
+
+## Jak spustit aplikaci
+### Metoda 1. (Docker)
+Stáhněte si repozitář.
+das
+### Metoda 2.
+V tomto případě je nutno mít staženou Javu, a to alespoň verzi 8.
+Otevřete konzoli/cli/ps/terminal ve složce :::::::::: a zadejte následující příkaz:
+
+## Jak používat aplikaci 
+Po spuštění bude aplikace poslouchat na portu 8080 localhostu (např. http://localhost:8080/endpoints).
+Controller podporuje následující operace:
+|metoda|endpoint|požadavek*|info
+|--|--|--|--|
+| GET | /endpoints  |  | seznam všech monitorovaných endpointů uživatele
+| GET | /endpoints/{id}  | id endpointu [Long] | vrátí info o konkrétním endpointu
+| POST| /endpoints  | MonitoredEndpoint (body) | vytvoří endpoint s danými parametry
+| PUT| /endpoints/{id}  | id endpointu, MonitoredEndpoint (body)| aktualizuje daný endpoint
+| DELETE | /endpoints/{id}  | id endpointu  | odstraní endpoint z databáze
+| GET | /endpoints/{id}/results  | id endpointu | posledních 10 logů daného endpointu
