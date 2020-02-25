@@ -35,3 +35,12 @@ Controller podporuje následující operace:
 | PUT| /endpoints/{id}  | id endpointu, MonitoredEndpoint (body)| aktualizuje daný endpoint
 | DELETE | /endpoints/{id}  | id endpointu  | odstraní endpoint z databáze
 | GET | /endpoints/{id}/results  | id endpointu | posledních 10 logů daného endpointu
+
+Příklad validního JSON body MonitoredEndpointu je následující (jméno je nepovinné):
+```json
+{
+	"name": "Google",
+	"url": "https://www.google.cz/",
+	"monitoredInterval": 3
+}
+```
