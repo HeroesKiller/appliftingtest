@@ -44,3 +44,8 @@ Příklad validního JSON body MonitoredEndpointu je následující (jméno je n
 	"monitoredInterval": 3
 }
 ```
+
+Testováno např. na:
+- https://www.applifting.cz/
+- https://www.google.com/
+- https://twitter.com/
